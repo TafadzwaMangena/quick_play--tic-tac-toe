@@ -1,0 +1,38 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    background-color: hsl(52, 83%, 55%);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+/* Header */
+header {
+    color: hsl(0, 0%, 0%);
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    padding: 1rem;
+    z-index: 99;
+    box-shadow: 0 2px 20px #fff;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
