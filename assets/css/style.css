@@ -41,7 +41,7 @@ a {
     align-items: center;
     border: 1px solid hsl(0, 0%, 0%);
     background-color: hsl(36, 100%, 37%);
-    box-shadow: 0 2px 20px #fff;
+    box-shadow: 0 2px 50px #977000;
 }
 
 .logo  h1 {
