@@ -13,18 +13,44 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <!--Header-->
-    <div class="logo">
-        <a href="index.html" aria-label="Visit the home page">
-            <img src="assets/images/logo-no-bg.webp" width="200px" alt="Quick Play tic tac toe logo">
-        </a>
-        <a href="index.html" aria-label="Visit the home page">
-            <h1>Quick Play tic tac toe</h1>
-        </a>
-    </div>
-
+    <header>
+        <div class="logo">
+            <a href="index.html" aria-label="Visit the home page">
+                <img src="assets/images/logo-no-bg.webp" width="200px" alt="Quick Play tic tac toe logo">
+            </a>
+            <a href="index.html" aria-label="Visit the home page">
+                <h1>Quick Play tic tac toe</h1>
+            </a>
+        </div>
+    </header>
+    
     <!--Main Content-->
+    <main>
+        <section class="gameArea">
+            <h1>3x3 tic tac toe</h1>
+            <h2 id="playersTurn"></h2>
+            <div class="gameGridContainer">
+                <div data-cell-index="0" class="cellBlock"></div>
+                <div data-cell-index="1" class="cellBlock"></div>
+                <div data-cell-index="2" class="cellBlock"></div>
+                <div data-cell-index="3" class="cellBlock"></div>
+                <div data-cell-index="4" class="cellBlock"></div>
+                <div data-cell-index="5" class="cellBlock"></div>
+                <div data-cell-index="6" class="cellBlock"></div>
+                <div data-cell-index="7" class="cellBlock"></div>
+                <div data-cell-index="8" class="cellBlock"></div>
+            </div>
+            <div class="resultsContainer">
+                <div id="player1Score"></div>
+                <div id="drawScore"></div>
+                <div id="player2Score"></div>
+            </div>
+            <button id="restartGameBtn">Restart Game</button>
+        </section>
+    </main>
 
     <!--Footer-->
 
