@@ -21,14 +21,10 @@ body {
 /* Header */
 header {
     color: hsl(0, 0%, 0%);
-    display: flex;
-    justify-content: space-evenly;
-    position: fixed;
     width: 100%;
-    align-items: center;
     padding: 1rem;
     z-index: 99;
-}
+} 
 
 a {
     text-decoration: none;
