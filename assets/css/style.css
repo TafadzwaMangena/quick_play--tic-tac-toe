@@ -76,10 +76,24 @@ a {
     width: 80%;
     margin: auto;
     border: 2px solid hsl(0, 0%, 0%);
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-.player1Score,
-.drawScore,
-.player2Score {
-    border: 1px solid hsl(0, 0%, 0%);
+#player1Score,
+#drawScore,
+#player2Score {
+    padding: 10px;
+    border: 2px solid hsl(0, 0%, 0%);
+}
+
+
+#restartGameBtn {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: hsl(36, 100%, 37%);
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px;
 }
