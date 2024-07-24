@@ -47,11 +47,17 @@ a {
     font-size: 40px;
 }
 
+.gameArea {
+    text-align: center;
+}
+
 .gameGridContainer {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    width: 225px;
+    width: 80%;
     margin: auto;
+    justify-content: center;
+    padding: 15px;
 }
 
 .cellBlock {
@@ -59,6 +65,21 @@ a {
     height: 120px;
     border: 3px solid hsl(0, 0%, 0%);
     box-shadow: 0 0 0 3px;
-    line-height: 120px;
+    line-height: 110px;
     font-size: 100px;
+    cursor: pointer;
+}
+
+.resultsContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    border: 2px solid hsl(0, 0%, 0%);
+}
+
+.player1Score,
+.drawScore,
+.player2Score {
+    border: 1px solid hsl(0, 0%, 0%);
 }
