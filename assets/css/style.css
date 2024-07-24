@@ -22,7 +22,7 @@ body {
 header {
     color: hsl(0, 0%, 0%);
     width: 100%;
-    padding: 1rem;
+    padding: 0.25rem;
     z-index: 99;
 } 
 
