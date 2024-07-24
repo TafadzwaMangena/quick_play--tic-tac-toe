@@ -97,3 +97,7 @@ a {
     border-radius: 6px;
     box-shadow: 0 0 0 1px;
 }
+
+#restartGameBtn:hover {
+    box-shadow: 0 0 20px hsl(36, 100%, 37%);;
+}
