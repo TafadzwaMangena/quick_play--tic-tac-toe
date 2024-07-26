@@ -21,10 +21,13 @@ let Winmessage = () => `${currentPlayer} has won this round!`;
 let drawmessage = () => `This round ended in a draw`;
 let currentPlayerTurn = () => `${currentPlayer}'s turn to play`;
 
+startGame();
 
 
 function startGame(){
-
+    cellBlocks.forEach(cellBlock => cellBlock.addEventListener("click", cellBlockClicked));
+    restartGameBtn.addEventListener("click", restartGame);
+    playersTurn.textContent = `${currentPlayer}'s turn to play`
 }
 
 function cellBlockClicked(){
