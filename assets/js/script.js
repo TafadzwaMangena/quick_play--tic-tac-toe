@@ -21,6 +21,12 @@ let Winmessage = () => `${currentPlayer} has won this round!`;
 let drawmessage = () => `This round ended in a draw`;
 let currentPlayerTurn = () => `${currentPlayer}'s turn to play`;
 
+
+
+function startGame(){
+
+}
+
 function cellBlockClicked(){
 
 }
@@ -50,5 +56,5 @@ function drawAddScore(){
 }
 
 function player2AddScore(){
-    
+
 }
