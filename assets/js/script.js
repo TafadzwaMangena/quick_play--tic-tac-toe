@@ -15,7 +15,7 @@ const winningConditions = [
 
 let gameState = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
-let gameActive = true;
+let gameActive = false;
 
 let Winmessage = () => `${currentPlayer} has won this round!`;
 let drawmessage = () => `This round ended in a draw`;
@@ -28,14 +28,22 @@ function startGame(){
     cellBlocks.forEach(cellBlock => cellBlock.addEventListener("click", cellBlockClicked));
     restartGameBtn.addEventListener("click", restartGame);
     playersTurn.textContent = `${currentPlayer}'s turn to play`
+    gameActive = true
 }
 
 function cellBlockClicked(){
+    const dataCellIndex = this.getAttribute("data-cell-index");
 
+    if(gameState[dataCellIndex] != "" || !gameActive)
+        return;
+
+    updateCellBlock(this, dataCellIndex);
+    checkWinner();
 }
 
 function updateCellBlock(cellBlock, index){
-
+    gameState[index] = currentPlayer;
+    cellBlock.textContent = currentPlayer
 }
 
 function changePlayer(){
