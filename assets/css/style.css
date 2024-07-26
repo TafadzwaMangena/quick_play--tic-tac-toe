@@ -21,7 +21,6 @@ body {
 
 /* Header */
 header {
-    color: hsl(263, 43%, 20%);
     width: 100%;
     padding: 0.25rem;
     z-index: 99;
@@ -38,7 +37,7 @@ a {
     align-items: center;
     border: 1px solid hsl(0, 0%, 100%);
     background-color: hsl(190, 71%, 25%);
-    box-shadow: 0 2px 50px hsl(257, 74%, 17%);
+    box-shadow: 0 2px 50px hsl(191, 77%, 9%);
 }
 
 .logo  h1 {
