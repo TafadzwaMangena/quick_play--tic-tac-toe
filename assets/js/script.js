@@ -50,6 +50,7 @@ function cellBlockClicked(){
         return;
 
     updateCellBlock(this, dataCellIndex);
+    changePlayer();
     checkWinner();
 }
 
@@ -62,8 +63,12 @@ function updateCellBlock(cellBlock, index){
     cellBlock.textContent = currentPlayer
 }
 
+/**
+ * 
+ */
 function changePlayer(){
-
+    currentPlayer = (currentPlayer == "X") ? "O" : "X";
+    playersTurn.textContent = `${currentPlayer}'s turn to play`
 }
 
 function checkWinner(){
