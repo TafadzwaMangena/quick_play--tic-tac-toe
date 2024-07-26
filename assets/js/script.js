@@ -94,7 +94,7 @@ function checkWinner(){
         playersTurn.textContent = winMessage();
         gameActive = false;
     }
-    else if(gameState.includes("")){
+    else if(!gameState.includes("")){
         playersTurn.textContent = drawMessage();
         gameActive = false;
     }
