@@ -91,11 +91,11 @@ function checkWinner(){
     }
 
     if(roundWon){
-        playersTurn.textContent = `winMessage`;
+        playersTurn.textContent = winMessage();
         gameActive = false;
     }
     else if(gameState.includes("")){
-        playersTurn.textContent = "drawMessage";
+        playersTurn.textContent = drawMessage();
         gameActive = false;
     }
     else{
