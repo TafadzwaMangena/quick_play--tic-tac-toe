@@ -83,9 +83,7 @@ a {
     margin-bottom: 10px;
 }
 
-#player1Score,
-#drawScore,
-#player2Score {
+.results {
     padding: 10px;
     border: 2px solid hsl(0, 0%, 100%);
 }
