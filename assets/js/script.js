@@ -17,8 +17,8 @@ let gameState = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
 let gameActive = false;
 
-let Winmessage = () => `${currentPlayer} has won this round!`;
-let drawmessage = () => `This round ended in a draw`;
+let winMessage = () => `${currentPlayer} has won this round!`;
+let drawMessage = () => `This round ended in a draw`;
 let currentPlayerTurn = () => `${currentPlayer}'s turn to play`;
 
 /**
@@ -64,7 +64,8 @@ function updateCellBlock(cellBlock, index){
 }
 
 /**
- * 
+ * Use ternary operator to check if the current player "X" is "O" otherwise "X",
+ * use template literal to display whose turn it is.
  */
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
@@ -72,10 +73,43 @@ function changePlayer(){
 }
 
 function checkWinner(){
+    roundWon = false;
+
+    for(let i = 0; i < winningConditions.length; i++){
+        const condition = winningConditions[i];
+        const cellBlockA = gameState[condition[0]];
+        const cellBlockB = gameState[condition[1]];
+        const cellBlockC = gameState[condition[2]];
+
+        if(cellA == "" || cellB == "" || cellC == ""){
+            continue;
+        }
+        if(cellA == cellB && cellB == cellC){
+            roundWon = true;
+            break;
+        }
+    }
+
+    if(roundWon){
+        playersTurn.textContent = `winMessage`;
+        gameActive = false;
+    }
+    else if(gameState.includes("")){
+        playersTurn.textContent = "drawMessage";
+        gameActive = false;
+    }
+    else{
+        changePlayer();
+    }
 
 }
 
 function restartGame(){
+    currentPlayer = "X";
+    gameState = ["", "", "", "", "", "", "", "", ""];
+    playersTurn.textContent = `${currentPlayer}'s turn to play`;
+    cellBlocks.forEach(cellBlock => cellBlock.textContent = "");
+    gameActive = true;
 
 }
 
