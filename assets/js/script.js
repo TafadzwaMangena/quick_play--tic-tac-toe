@@ -34,7 +34,7 @@ startGame();
 function startGame(){
     cellBlocks.forEach(cellBlock => cellBlock.addEventListener("click", cellBlockClicked));
     restartGameBtn.addEventListener("click", restartGame);
-    playersTurn.textContent = `${currentPlayer}'s turn to play`
+    playersTurn.textContent = `${currentPlayer}'s turn to play`;
     gameActive = true
 }
 
@@ -46,11 +46,11 @@ function startGame(){
 function cellBlockClicked(){
     const dataCellIndex = this.getAttribute("data-cell-index");
 
-    if(gameState[dataCellIndex] != "" || !gameActive)
+    if(gameState[dataCellIndex] != "" || !gameActive){
         return;
+    }
 
     updateCellBlock(this, dataCellIndex);
-    changePlayer();
     checkWinner();
 }
 
@@ -81,10 +81,10 @@ function checkWinner(){
         const cellBlockB = gameState[condition[1]];
         const cellBlockC = gameState[condition[2]];
 
-        if(cellA == "" || cellB == "" || cellC == ""){
+        if(cellBlockA == "" || cellBlockB == "" || cellBlockC == ""){
             continue;
         }
-        if(cellA == cellB && cellB == cellC){
+        if(cellBlockA == cellBlockB && cellBlockB == cellBlockC){
             roundWon = true;
             break;
         }
