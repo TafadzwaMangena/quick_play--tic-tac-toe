@@ -37,7 +37,6 @@ a {
     align-items: center;
     border: 1px solid hsl(0, 0%, 100%);
     background-color: hsl(190, 71%, 25%);
-    box-shadow: 0 2px 50px hsl(191, 77%, 9%);
 }
 
 .logo  h1 {
@@ -79,6 +78,7 @@ a {
     width:100%;
     margin: auto;
     border: 2px solid hsl(0, 0%, 100%);
+    background-color: hsl(190, 71%, 25%);
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -96,7 +96,6 @@ a {
     background-color: hsl(190, 71%, 25%);
     color: hsl(0, 0%, 100%);
     border-radius: 6px;
-    box-shadow: 0 0 0 1px;
 }
 
 #restartGameBtn:hover {
