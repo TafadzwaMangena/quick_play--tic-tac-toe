@@ -18,7 +18,7 @@ let currentPlayer = "X";
 let gameActive = false;
 
 let winMessage = () => `${currentPlayer} has won this round!`;
-let drawMessage = () => `This round ended in a draw`;
+const drawMessage = () => `This round ended in a draw`;
 let currentPlayerTurn = () => `${currentPlayer}'s turn to play`;
 
 /**
@@ -114,6 +114,7 @@ function restartGame(){
 }
 
 function player1AddScore(){
+    
 
 }
 
