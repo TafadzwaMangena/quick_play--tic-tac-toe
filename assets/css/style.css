@@ -74,6 +74,10 @@ a {
     display: none;
 }
 
+.page.active {
+    display: block;
+  }
+
 .gameArea {
     text-align: center;
 }
