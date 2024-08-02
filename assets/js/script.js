@@ -111,7 +111,22 @@ function restartGame() {
   gameActive = true;
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const pages = [
+      document.querySelector(".intro-options"),
+      document.querySelector(".rules"),
+      document.querySelector(".gameArea"),
+    ];  
 
 const welcomeIntro = document.querySelector(".intro-options");
 const rulesAndInitiate = document.querySelector(".rules");
 const gameArea = document.querySelector(".gameArea");
+
+if (!gameArea) {
+    console.error("page not found");
+  }
+
+  const optionsBtn = document.querySelector("#options-btn");
+  const initiateGameBtn = document.querySelector("#initiate-game-btn");
+
+});
