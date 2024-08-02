@@ -69,6 +69,11 @@ a {
     margin: 15px;
 }
 
+.hidden,
+.page {
+    display: none;
+}
+
 .gameArea {
     text-align: center;
 }
