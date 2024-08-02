@@ -112,16 +112,3 @@ function restartGame(){
     gameActive = true;
 
 }
-
-function player1AddScore(){
-    
-
-}
-
-function drawAddScore(){
-
-}
-
-function player2AddScore(){
-
-}
