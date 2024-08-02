@@ -46,6 +46,17 @@ a {
     font-size: 40px;
 }
 
+.intropage,
+.rulespage {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid hsl(0, 0%, 100%);
+    margin: auto;
+    width: 90%;
+}
+
 .gameArea {
     text-align: center;
 }
