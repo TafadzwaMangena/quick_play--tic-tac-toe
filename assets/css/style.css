@@ -130,3 +130,13 @@ a {
     background-color: hsl(190, 53%, 39%);
     cursor: pointer;
 }
+
+#options-btn:hover {
+    background-color: hsl(190, 53%, 39%);
+    cursor: pointer;
+}
+
+#initiate-game-btn:hover {
+    background-color: hsl(190, 53%, 39%);
+    cursor: pointer;
+}
