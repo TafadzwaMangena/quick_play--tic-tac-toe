@@ -57,6 +57,18 @@ a {
     width: 90%;
 }
 
+#options-btn,
+#initiate-game-btn {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: hsl(190, 71%, 25%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 6px;
+    margin: 15px;
+}
+
 .gameArea {
     text-align: center;
 }
