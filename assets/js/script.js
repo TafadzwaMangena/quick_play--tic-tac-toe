@@ -111,6 +111,12 @@ function restartGame() {
   gameActive = true;
 }
 
+const welcomeIntro = document.querySelector(".intropage");
+const rulesAndInitiate = document.querySelector(".rules");
+const gameArea = document.querySelector(".gameArea");
+const optionsBtn = document.querySelector("#options-btn");
+const initiateGameBtn = document.querySelector("#initiate-game-btn");
+
 document.addEventListener("DOMContentLoaded", () => {
     const pages = [
       document.querySelector(".intro-options"),
@@ -118,42 +124,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".gameArea"),
     ];  
 
-const welcomeIntro = document.querySelector(".intro-options");
-const rulesAndInitiate = document.querySelector(".rules");
-const gameArea = document.querySelector(".gameArea");
-
 if (!gameArea) {
     console.error("page not found");
-  }
-
-  const optionsBtn = document.querySelector("#options-btn");
-  const initiateGameBtn = document.querySelector("#initiate-game-btn");
-
-  function showPageOne() {
-    welcomeIntro.classList.add("active");
-    welcomeIntro.classList.remove("hidden");
-    rulesAndInitiate.classList.remove("active");
-    rulesAndInitiate.classList.add("hidden");
-    gameArea.classList.remove("active");
-    gameArea.classList.add("hidden");
-  }
-
-  function showPageTwo() {
-    rulesAndInitiate.classList.add("active");
-    rulesAndInitiate.classList.remove("hidden");
-    welcomeIntro.classList.remove("active");
-    welcomeIntro.classList.add("hidden");
-    gameArea.classList.remove("active");
-    gameArea.classList.add("hidden");
-  }
-
-  function showPageThree() {
-    gameArea.classList.add("active");
-    gameArea.classList.remove("hidden");
-    welcomeIntro.classList.remove("active");
-    welcomeIntro.classList.add("hidden");
-    rulesAndInitiate.classList.remove("active");
-    rulesAndInitiate.classList.add("hidden");
   }
 
   console.log(gameArea);
@@ -163,3 +135,30 @@ if (!gameArea) {
     console.log("clicked");
   };
 });
+
+function showPageOne() {
+  welcomeIntro.classList.add("active");
+  welcomeIntro.classList.remove("hidden");
+  rulesAndInitiate.classList.remove("active");
+  rulesAndInitiate.classList.add("hidden");
+  gameArea.classList.remove("active");
+  gameArea.classList.add("hidden");
+}
+
+function showPageTwo() {
+  rulesAndInitiate.classList.add("active");
+  rulesAndInitiate.classList.remove("hidden");
+  welcomeIntro.classList.remove("active");
+  welcomeIntro.classList.add("hidden");
+  gameArea.classList.remove("active");
+  gameArea.classList.add("hidden");
+}
+
+function showPageThree() {
+  gameArea.classList.add("active");
+  gameArea.classList.remove("hidden");
+  welcomeIntro.classList.remove("active");
+  welcomeIntro.classList.add("hidden");
+  rulesAndInitiate.classList.remove("active");
+  rulesAndInitiate.classList.add("hidden");
+}

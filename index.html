@@ -33,7 +33,7 @@
 
         <!--Page One-->
         <!--Welcome Page and Options to Play button-->
-        <section class="intropage">
+        <section class="intropage active">
             <div class="intro-options">
                 <p>
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -46,14 +46,14 @@
                     deserunt mollit anim id est laborum."
                 </p>
                 <div>
-                    <button onclick="showNextPage(1)" id="options-btn">Options to Play</button>
+                    <button onclick="showPageTwo()" id="options-btn">Options to Play</button>
                 </div>
             </div>
         </section>
 
         <!--Page Two-->
         <!--Game Rules and Initiate game button-->
-        <section class="rulespage rules hidden initiate-game page active">
+        <section class="rulespage rules hidden initiate-game page">
             <div>
                 <p>
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -66,14 +66,14 @@
                     deserunt mollit anim id est laborum."
                 </p>
                 <div>
-                    <button onclick="showNextPage(2)" id="initiate-game-btn">Initiate Game</button>
+                    <button onclick="showPageThree()" id="initiate-game-btn">Initiate Game</button>
                 </div>
             </div>
         </section>
 
         <!--Page Three-->
         <!--Main Game Area-->
-        <section class="gameArea hidden game-container page active">
+        <section class="gameArea hidden game-container page">
             <h1>3x3 tic tac toe</h1>
             <h2 id="playersTurn"></h2>
             <div class="gameGridContainer">
