@@ -3,15 +3,15 @@ const cellBlocks = document.querySelectorAll(".cellBlock");
 const restartGameBtn = document.querySelector("#restartGameBtn");
 
 const winningConditions = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-]
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
+];
 
 let gameState = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
@@ -31,11 +31,13 @@ startGame();
  * Add event listener to the restart game button when it is clicked,
  * Upon start the game is set to be active and the current player's name is displayed.
  */
-function startGame(){
-    cellBlocks.forEach(cellBlock => cellBlock.addEventListener("click", cellBlockClicked));
-    restartGameBtn.addEventListener("click", restartGame);
-    playersTurn.textContent = `${currentPlayer}'s turn to play`;
-    gameActive = true
+function startGame() {
+  cellBlocks.forEach((cellBlock) =>
+    cellBlock.addEventListener("click", cellBlockClicked)
+  );
+  restartGameBtn.addEventListener("click", restartGame);
+  playersTurn.textContent = `${currentPlayer}'s turn to play`;
+  gameActive = true;
 }
 
 /**
@@ -43,72 +45,73 @@ function startGame(){
  * If cells blocks are empty or the game not active, nothing happens.
  * Otherwise collect cell block info and check winner.
  */
-function cellBlockClicked(){
-    const dataCellIndex = this.getAttribute("data-cell-index");
+function cellBlockClicked() {
+  const dataCellIndex = this.getAttribute("data-cell-index");
 
-    if(gameState[dataCellIndex] != "" || !gameActive){
-        return;
-    }
+  if (gameState[dataCellIndex] != "" || !gameActive) {
+    return;
+  }
 
-    updateCellBlock(this, dataCellIndex);
-    checkWinner();
+  updateCellBlock(this, dataCellIndex);
+  checkWinner();
 }
 
 /**
  * Updating the placeholders,
  * replace the text content of the cellblocks to current player, either "X" or "O".
  */
-function updateCellBlock(cellBlock, index){
-    gameState[index] = currentPlayer;
-    cellBlock.textContent = currentPlayer
+function updateCellBlock(cellBlock, index) {
+  gameState[index] = currentPlayer;
+  cellBlock.textContent = currentPlayer;
 }
 
 /**
  * Use ternary operator to check if the current player "X" is "O" otherwise "X",
  * use template literal to display whose turn it is.
  */
-function changePlayer(){
-    currentPlayer = (currentPlayer == "X") ? "O" : "X";
-    playersTurn.textContent = `${currentPlayer}'s turn to play`
+function changePlayer() {
+  currentPlayer = currentPlayer == "X" ? "O" : "X";
+  playersTurn.textContent = `${currentPlayer}'s turn to play`;
 }
 
-function checkWinner(){
-    roundWon = false;
+function checkWinner() {
+  roundWon = false;
 
-    for(let i = 0; i < winningConditions.length; i++){
-        const condition = winningConditions[i];
-        const cellBlockA = gameState[condition[0]];
-        const cellBlockB = gameState[condition[1]];
-        const cellBlockC = gameState[condition[2]];
+  for (let i = 0; i < winningConditions.length; i++) {
+    const condition = winningConditions[i];
+    const cellBlockA = gameState[condition[0]];
+    const cellBlockB = gameState[condition[1]];
+    const cellBlockC = gameState[condition[2]];
 
-        if(cellBlockA == "" || cellBlockB == "" || cellBlockC == ""){
-            continue;
-        }
-        if(cellBlockA == cellBlockB && cellBlockB == cellBlockC){
-            roundWon = true;
-            break;
-        }
+    if (cellBlockA == "" || cellBlockB == "" || cellBlockC == "") {
+      continue;
     }
+    if (cellBlockA == cellBlockB && cellBlockB == cellBlockC) {
+      roundWon = true;
+      break;
+    }
+  }
 
-    if(roundWon){
-        playersTurn.textContent = winMessage();
-        gameActive = false;
-    }
-    else if(!gameState.includes("")){
-        playersTurn.textContent = drawMessage();
-        gameActive = false;
-    }
-    else{
-        changePlayer();
-    }
-
+  if (roundWon) {
+    playersTurn.textContent = winMessage();
+    gameActive = false;
+  } else if (!gameState.includes("")) {
+    playersTurn.textContent = drawMessage();
+    gameActive = false;
+  } else {
+    changePlayer();
+  }
 }
 
-function restartGame(){
-    currentPlayer = "X";
-    gameState = ["", "", "", "", "", "", "", "", ""];
-    playersTurn.textContent = `${currentPlayer}'s turn to play`;
-    cellBlocks.forEach(cellBlock => cellBlock.textContent = "");
-    gameActive = true;
-
+function restartGame() {
+  currentPlayer = "X";
+  gameState = ["", "", "", "", "", "", "", "", ""];
+  playersTurn.textContent = `${currentPlayer}'s turn to play`;
+  cellBlocks.forEach((cellBlock) => (cellBlock.textContent = ""));
+  gameActive = true;
 }
+
+
+const welcomeIntro = document.querySelector(".intro-options");
+const rulesAndInitiate = document.querySelector(".rules");
+const gameArea = document.querySelector(".gameArea");
