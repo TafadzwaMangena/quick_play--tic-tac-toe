@@ -129,4 +129,37 @@ if (!gameArea) {
   const optionsBtn = document.querySelector("#options-btn");
   const initiateGameBtn = document.querySelector("#initiate-game-btn");
 
+  function showPageOne() {
+    welcomeIntro.classList.add("active");
+    welcomeIntro.classList.remove("hidden");
+    rulesAndInitiate.classList.remove("active");
+    rulesAndInitiate.classList.add("hidden");
+    gameArea.classList.remove("active");
+    gameArea.classList.add("hidden");
+  }
+
+  function showPageTwo() {
+    rulesAndInitiate.classList.add("active");
+    rulesAndInitiate.classList.remove("hidden");
+    welcomeIntro.classList.remove("active");
+    welcomeIntro.classList.add("hidden");
+    gameArea.classList.remove("active");
+    gameArea.classList.add("hidden");
+  }
+
+  function showPageThree() {
+    gameArea.classList.add("active");
+    gameArea.classList.remove("hidden");
+    welcomeIntro.classList.remove("active");
+    welcomeIntro.classList.add("hidden");
+    rulesAndInitiate.classList.remove("active");
+    rulesAndInitiate.classList.add("hidden");
+  }
+
+  console.log(gameArea);
+
+  window.showNextPage = function (index) {
+    showPageOne();
+    console.log("clicked");
+  };
 });
