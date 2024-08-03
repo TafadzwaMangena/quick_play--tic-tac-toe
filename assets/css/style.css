@@ -74,6 +74,16 @@ main {
     margin: 15px;
 }
 
+#options-btn:hover {
+    background-color: hsl(190, 53%, 39%);
+    cursor: pointer;
+}
+
+#initiate-game-btn:hover {
+    background-color: hsl(190, 53%, 39%);
+    cursor: pointer;
+}
+
 .hidden,
 .page {
     display: none;
@@ -141,12 +151,14 @@ main {
     cursor: pointer;
 }
 
-#options-btn:hover {
-    background-color: hsl(190, 53%, 39%);
-    cursor: pointer;
-}
-
-#initiate-game-btn:hover {
-    background-color: hsl(190, 53%, 39%);
-    cursor: pointer;
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid hsl(0, 0%, 100%);
+    background-color: hsl(190, 71%, 25%);
+    height: 110.27px;
+    margin: 5px;
 }
