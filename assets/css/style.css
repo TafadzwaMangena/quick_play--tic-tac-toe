@@ -11,10 +11,11 @@
 /* General styles */
 body {
     background-color: hsl(190, 53%, 39%);
-    min-height: 100vh;
     width: 100%;
     display: flex;
+    min-height: 100vh;
     flex-direction: column;
+    justify-content: space-between;
     font-family: 'Playfair Display', sans-serif;
     color: hsl(0, 0%, 100%);
 }
@@ -46,12 +47,7 @@ a {
     font-size: 40px;
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
 
 main {
     width: 100%;
