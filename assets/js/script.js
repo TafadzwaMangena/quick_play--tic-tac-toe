@@ -98,6 +98,8 @@ function checkWinner() {
   } else if (!gameState.includes("")) {
     playersTurn.textContent = drawMessage();
     gameActive = false;
+    let oldScore = parseInt(document.getElementById("drawScore").innerText);
+    document.getElementById("drawScore").innerText = ++oldScore;
   } else {
     changePlayer();
   }
@@ -118,13 +120,13 @@ const optionsBtn = document.querySelector("#options-btn");
 const initiateGameBtn = document.querySelector("#initiate-game-btn");
 
 document.addEventListener("DOMContentLoaded", () => {
-    const pages = [
-      document.querySelector(".intro-options"),
-      document.querySelector(".rules"),
-      document.querySelector(".gameArea"),
-    ];  
+  const pages = [
+    document.querySelector(".intro-options"),
+    document.querySelector(".rules"),
+    document.querySelector(".gameArea"),
+  ];
 
-if (!gameArea) {
+  if (!gameArea) {
     console.error("page not found");
   }
 
