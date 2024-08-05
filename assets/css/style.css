@@ -137,7 +137,8 @@ main {
 }
 
 
-#restartGameBtn {
+#restartGameBtn,
+#nextRoundBtn {
     font-family: 'Times New Roman', Times, serif;
     padding: 15px;
     font-size: 18px;
