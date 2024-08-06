@@ -1,6 +1,7 @@
 const playersTurn = document.querySelector("#playersTurn");
 const cellBlocks = document.querySelectorAll(".cellBlock");
 const restartGameBtn = document.querySelector("#restartGameBtn");
+const nextRoundBtn = document.querySelector("#nextRoundBtn");
 
 const winningConditions = [
   [0, 1, 2],
@@ -36,6 +37,10 @@ function startGame() {
     cellBlock.addEventListener("click", cellBlockClicked)
   );
   restartGameBtn.addEventListener("click", restartGame);
+  playersTurn.textContent = `${currentPlayer}'s turn to play`;
+  gameActive = true;
+
+  nextRoundBtn.addEventListener("click", nextRound);
   playersTurn.textContent = `${currentPlayer}'s turn to play`;
   gameActive = true;
 }
@@ -103,6 +108,14 @@ function checkWinner() {
   } else {
     changePlayer();
   }
+}
+
+function nextRound() {
+  currentPlayer = "X";
+  gameState = ["", "", "", "", "", "", "", "", ""];
+  playersTurn.textContent = `${currentPlayer}'s turn to play`;
+  cellBlocks.forEach((cellBlock) => (cellBlock.textContent = ""));
+  gameActive = true;
 }
 
 function restartGame() {
