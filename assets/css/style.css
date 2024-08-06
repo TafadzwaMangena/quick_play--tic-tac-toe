@@ -148,7 +148,8 @@ main {
     border-radius: 6px;
 }
 
-#restartGameBtn:hover {
+#restartGameBtn:hover,
+#nextRoundBtn:hover {
     background-color: hsl(190, 53%, 39%);
     cursor: pointer;
 }
