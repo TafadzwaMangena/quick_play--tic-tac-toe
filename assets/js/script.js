@@ -68,6 +68,12 @@ function cellBlockClicked() {
 function updateCellBlock(cellBlock, index) {
   gameState[index] = currentPlayer;
   cellBlock.textContent = currentPlayer;
+  addColour(cellBlock);
+}
+
+function addColour(cellBlock) {
+  const color = (currentPlayer == "X") ? "orange" : "blue";
+  cellBlock.style.color = color;
 }
 
 /**
