@@ -118,11 +118,16 @@ function nextRound() {
   gameActive = true;
 }
 
+const player1Score = document.querySelector("#player1Score");
+const player2Score = document.querySelector("#player2Score");
+
 function restartGame() {
   currentPlayer = "X";
   gameState = ["", "", "", "", "", "", "", "", ""];
   playersTurn.textContent = `${currentPlayer}'s turn to play`;
   cellBlocks.forEach((cellBlock) => (cellBlock.textContent = ""));
+  player1Score.textContent = 0
+  playerScore.textContent = 0
   gameActive = true;
 }
 
