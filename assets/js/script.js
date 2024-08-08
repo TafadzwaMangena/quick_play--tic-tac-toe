@@ -2,6 +2,8 @@ const playersTurn = document.querySelector("#playersTurn");
 const cellBlocks = document.querySelectorAll(".cellBlock");
 const restartGameBtn = document.querySelector("#restartGameBtn");
 const nextRoundBtn = document.querySelector("#nextRoundBtn");
+const player1Score = document.querySelector("#player1Score");
+const player2Score = document.querySelector("#player2Score");
 
 const winningConditions = [
   [0, 1, 2],
@@ -15,7 +17,7 @@ const winningConditions = [
 ];
 
 let gameState = ["", "", "", "", "", "", "", "", ""];
-let currentPlayer = "X";
+let currentPlayer = "1";
 let gameActive = false;
 
 let winMessage = () => `${currentPlayer} has won this round!`;
@@ -67,12 +69,12 @@ function cellBlockClicked() {
  */
 function updateCellBlock(cellBlock, index) {
   gameState[index] = currentPlayer;
-  cellBlock.textContent = currentPlayer;
+  cellBlock.textContent = currentPlayer ===  "1" ? "X" : "O";
   addColour(cellBlock);
 }
 
 function addColour(cellBlock) {
-  const color = (currentPlayer == "X") ? "orange" : "blue";
+  const color = currentPlayer == "1" ? "orange" : "blue";
   cellBlock.style.color = color;
 }
 
@@ -80,8 +82,9 @@ function addColour(cellBlock) {
  * Use ternary operator to check if the current player "X" is "O" otherwise "X",
  * use template literal to display whose turn it is.
  */
+
 function changePlayer() {
-  currentPlayer = currentPlayer == "X" ? "O" : "X";
+  currentPlayer = currentPlayer == "1" ? "2" : "1";
   playersTurn.textContent = `${currentPlayer}'s turn to play`;
 }
 
@@ -105,6 +108,9 @@ function checkWinner() {
 
   if (roundWon) {
     playersTurn.textContent = winMessage();
+    let player1 = parseInt(player1Score.innerText);
+    let player2 = parseInt(player2Score.innerText);
+    currentPlayer === "1" ? player1Score.innerText = ++player1 : player2Score.innerText = ++player2;
     gameActive = false;
   } else if (!gameState.includes("")) {
     playersTurn.textContent = drawMessage();
@@ -117,23 +123,23 @@ function checkWinner() {
 }
 
 function nextRound() {
-  currentPlayer = "X";
+  currentPlayer = "1";
   gameState = ["", "", "", "", "", "", "", "", ""];
   playersTurn.textContent = `${currentPlayer}'s turn to play`;
   cellBlocks.forEach((cellBlock) => (cellBlock.textContent = ""));
   gameActive = true;
 }
 
-const player1Score = document.querySelector("#player1Score");
-const player2Score = document.querySelector("#player2Score");
+
 
 function restartGame() {
-  currentPlayer = "X";
+  currentPlayer = "1";
   gameState = ["", "", "", "", "", "", "", "", ""];
   playersTurn.textContent = `${currentPlayer}'s turn to play`;
   cellBlocks.forEach((cellBlock) => (cellBlock.textContent = ""));
-  player1Score.textContent = 0
-  playerScore.textContent = 0
+  player1Score.innerText= 0;
+  player2Score.innerText = 0;
+  drawScore.innerText = 0;
   gameActive = true;
 }
 
