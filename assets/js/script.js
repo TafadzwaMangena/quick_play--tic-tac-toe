@@ -17,7 +17,7 @@ const winningConditions = [
 ];
 
 let gameState = ["", "", "", "", "", "", "", "", ""];
-let currentPlayer = "1";
+let currentPlayer = "X";
 let gameActive = false;
 
 let winMessage = () => `${currentPlayer} has won this round!`;
@@ -69,12 +69,12 @@ function cellBlockClicked() {
  */
 function updateCellBlock(cellBlock, index) {
   gameState[index] = currentPlayer;
-  cellBlock.textContent = currentPlayer ===  "1" ? "X" : "O";
+  cellBlock.textContent = currentPlayer ===  "X" ? "X" : "O";
   addColour(cellBlock);
 }
 
 function addColour(cellBlock) {
-  const color = currentPlayer == "1" ? "orange" : "blue";
+  const color = currentPlayer == "X" ? "orange" : "blue";
   cellBlock.style.color = color;
 }
 
@@ -84,7 +84,7 @@ function addColour(cellBlock) {
  */
 
 function changePlayer() {
-  currentPlayer = currentPlayer == "1" ? "2" : "1";
+  currentPlayer = currentPlayer == "X" ? "O" : "X";
   playersTurn.textContent = `${currentPlayer}'s turn to play`;
 }
 
@@ -110,7 +110,7 @@ function checkWinner() {
     playersTurn.textContent = winMessage();
     let player1 = parseInt(player1Score.innerText);
     let player2 = parseInt(player2Score.innerText);
-    currentPlayer === "1" ? player1Score.innerText = ++player1 : player2Score.innerText = ++player2;
+    currentPlayer === "X" ? player1Score.innerText = ++player1 : player2Score.innerText = ++player2;
     gameActive = false;
   } else if (!gameState.includes("")) {
     playersTurn.textContent = drawMessage();
@@ -123,7 +123,7 @@ function checkWinner() {
 }
 
 function nextRound() {
-  currentPlayer = "1";
+  currentPlayer = "X";
   gameState = ["", "", "", "", "", "", "", "", ""];
   playersTurn.textContent = `${currentPlayer}'s turn to play`;
   cellBlocks.forEach((cellBlock) => (cellBlock.textContent = ""));
@@ -133,7 +133,7 @@ function nextRound() {
 
 
 function restartGame() {
-  currentPlayer = "1";
+  currentPlayer = "X";
   gameState = ["", "", "", "", "", "", "", "", ""];
   playersTurn.textContent = `${currentPlayer}'s turn to play`;
   cellBlocks.forEach((cellBlock) => (cellBlock.textContent = ""));
