@@ -4,6 +4,7 @@ const restartGameBtn = document.querySelector("#restartGameBtn");
 const nextRoundBtn = document.querySelector("#nextRoundBtn");
 const player1Score = document.querySelector("#player1Score");
 const player2Score = document.querySelector("#player2Score");
+const drawScore = document.querySelector("#drawScore")
 
 const winningConditions = [
   [0, 1, 2],
