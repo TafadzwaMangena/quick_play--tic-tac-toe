@@ -4,7 +4,7 @@ const restartGameBtn = document.querySelector("#restartGameBtn");
 const nextRoundBtn = document.querySelector("#nextRoundBtn");
 const player1Score = document.querySelector("#player1Score");
 const player2Score = document.querySelector("#player2Score");
-const drawScore = document.querySelector("#drawScore")
+const drawScore = document.querySelector("#drawScore");
 
 const winningConditions = [
   [0, 1, 2],
@@ -40,11 +40,11 @@ function startGame() {
     cellBlock.addEventListener("click", cellBlockClicked)
   );
   restartGameBtn.addEventListener("click", restartGame);
-  playersTurn.textContent = `${currentPlayer}'s turn to play`;
+  playersTurn.textContent = currentPlayerTurn();
   gameActive = true;
 
   nextRoundBtn.addEventListener("click", nextRound);
-  playersTurn.textContent = `${currentPlayer}'s turn to play`;
+  playersTurn.textContent = currentPlayerTurn();
   gameActive = true;
 }
 
@@ -126,7 +126,7 @@ function checkWinner() {
 function nextRound() {
   currentPlayer = "X";
   gameState = ["", "", "", "", "", "", "", "", ""];
-  playersTurn.textContent = `${currentPlayer}'s turn to play`;
+  playersTurn.textContent = currentPlayerTurn();
   cellBlocks.forEach((cellBlock) => (cellBlock.textContent = ""));
   gameActive = true;
 }
@@ -136,7 +136,7 @@ function nextRound() {
 function restartGame() {
   currentPlayer = "X";
   gameState = ["", "", "", "", "", "", "", "", ""];
-  playersTurn.textContent = `${currentPlayer}'s turn to play`;
+  playersTurn.textContent = currentPlayerTurn();
   cellBlocks.forEach((cellBlock) => (cellBlock.textContent = ""));
   player1Score.innerText= 0;
   player2Score.innerText = 0;
@@ -164,9 +164,9 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(gameArea);
 
   window.showNextPage = function (index) {
-    showPageOne();
-    console.log("clicked");
-  };
+     showPageOne();
+     console.log("clicked");
+   };
 });
 
 function showPageOne() {
