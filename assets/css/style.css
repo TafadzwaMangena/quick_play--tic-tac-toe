@@ -32,6 +32,10 @@ a {
     color: hsl(0, 0%, 100%);
 }
 
+img {
+    width: 100px
+}
+
 .logo {
     display: flex;
     justify-content: center;
