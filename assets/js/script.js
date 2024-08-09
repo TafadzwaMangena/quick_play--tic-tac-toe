@@ -90,7 +90,7 @@ function changePlayer() {
 }
 
 function checkWinner() {
-  roundWon = false;
+  let roundWon = false;
 
   for (let i = 0; i < winningConditions.length; i++) {
     const condition = winningConditions[i];
