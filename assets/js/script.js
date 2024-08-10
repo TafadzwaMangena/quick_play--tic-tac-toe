@@ -74,6 +74,10 @@ function updateCellBlock(cellBlock, index) {
   addColour(cellBlock);
 }
 
+/**
+ * Fucnction to add color to current player cell block, Orange for current player "X" otherwise blue.
+ */
+
 function addColour(cellBlock) {
   const color = currentPlayer == "X" ? "orange" : "blue";
   cellBlock.style.color = color;
@@ -81,7 +85,7 @@ function addColour(cellBlock) {
 
 /**
  * Use ternary operator to check if the current player "X" is "O" otherwise "X",
- * use template literal to display whose turn it is.
+ * Display whose turn it is.
  */
 
 function changePlayer() {
@@ -89,8 +93,18 @@ function changePlayer() {
   playersTurn.textContent = currentPlayerTurn();
 }
 
+/**
+ * Function to check winner.
+ */
+
 function checkWinner() {
   let roundWon = false;
+
+  /**
+   * For loop to check win conditions in win conditions array.
+   * If there are empty cell blocks, continue game.
+   * If any win conditions are met, round is won, break.
+   */
 
   for (let i = 0; i < winningConditions.length; i++) {
     const condition = winningConditions[i];
@@ -106,6 +120,12 @@ function checkWinner() {
       break;
     }
   }
+
+  /**
+   * If round is won, dispaly win message, increase current player score by1, game not active.
+   * Else if, there are no empty spaces, display draw message, game is not active and increase draw score by 1.
+   * Otherwise change player.
+   */
 
   if (roundWon) {
     playersTurn.textContent = winMessage();
@@ -127,6 +147,11 @@ function checkWinner() {
   }
 }
 
+/**
+ * Function to start next round.
+ * Change current player to and current player message to "X", clear cell blocks, set game active.
+ */
+
 function nextRound() {
   currentPlayer = "X";
   gameState = ["", "", "", "", "", "", "", "", ""];
@@ -134,6 +159,12 @@ function nextRound() {
   cellBlocks.forEach((cellBlock) => (cellBlock.textContent = ""));
   gameActive = true;
 }
+
+/**
+ * Function to start next round.
+ * Change current player to and current player message to "X", clear cell blocks, set game active.
+ * Reset all scores
+ */
 
 function restartGame() {
   currentPlayer = "X";
@@ -167,6 +198,10 @@ document.addEventListener("DOMContentLoaded", () => {
      showPageOne();
    };
 });
+
+/**
+ * Functions to display different html pages.
+ */
 
 function showPageOne() {
   welcomeIntro.classList.add("active");
