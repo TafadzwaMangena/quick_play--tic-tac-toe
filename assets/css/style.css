@@ -67,6 +67,10 @@ main {
     width: 90%;
 }
 
+ol {
+    list-style-type: none;
+  }
+
 #options-btn,
 #initiate-game-btn {
     font-family: 'Times New Roman', Times, serif;
