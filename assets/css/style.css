@@ -39,6 +39,7 @@ img {
 .logo {
     display: flex;
     justify-content: center;
+    text-align: center;
     align-items: center;
     border: 1px solid hsl(0, 0%, 100%);
     background-color: hsl(190, 71%, 25%);
