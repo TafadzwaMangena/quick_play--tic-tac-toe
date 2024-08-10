@@ -86,7 +86,7 @@ function addColour(cellBlock) {
 
 function changePlayer() {
   currentPlayer = currentPlayer == "X" ? "O" : "X";
-  playersTurn.textContent = `${currentPlayer}'s turn to play`;
+  playersTurn.textContent = currentPlayerTurn();
 }
 
 function checkWinner() {
