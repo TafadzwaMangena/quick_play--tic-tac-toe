@@ -1,10 +1,10 @@
-const playersTurn = document.querySelector("#playersTurn");
-const cellBlocks = document.querySelectorAll(".cellBlock");
-const restartGameBtn = document.querySelector("#restartGameBtn");
-const nextRoundBtn = document.querySelector("#nextRoundBtn");
-const player1Score = document.querySelector("#player1Score");
-const player2Score = document.querySelector("#player2Score");
-const drawScore = document.querySelector("#drawScore");
+const playersTurn = document.querySelector("#players-turn");
+const cellBlocks = document.querySelectorAll(".cell-block");
+const restartGameBtn = document.querySelector("#restart-game-btn");
+const nextRoundBtn = document.querySelector("#next-round-btn");
+const player1Score = document.querySelector("#player1-score");
+const player2Score = document.querySelector("#player2-score");
+const drawScore = document.querySelector("#draw-score");
 
 const winningConditions = [
   [0, 1, 2],
@@ -116,8 +116,8 @@ function checkWinner() {
   } else if (!gameState.includes("")) {
     playersTurn.textContent = drawMessage();
     gameActive = false;
-    let oldScore = parseInt(document.getElementById("drawScore").innerText);
-    document.getElementById("drawScore").innerText = ++oldScore;
+    let oldScore = parseInt(document.getElementById("draw-score").innerText);
+    document.getElementById("draw-score").innerText = ++oldScore;
   } else {
     changePlayer();
   }
@@ -146,7 +146,7 @@ function restartGame() {
 
 const welcomeIntro = document.querySelector(".intropage");
 const rulesAndInitiate = document.querySelector(".rules");
-const gameArea = document.querySelector(".gameArea");
+const gameArea = document.querySelector(".game-area");
 //const optionsBtn = document.querySelector("#options-btn");
 //const initiateGameBtn = document.querySelector("#initiate-game-btn");
 
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const pages = [
     document.querySelector(".intro-options"),
     document.querySelector(".rules"),
-    document.querySelector(".gameArea"),
+    document.querySelector(".game-area"),
   ];
 
   if (!gameArea) {

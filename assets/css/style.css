@@ -99,11 +99,11 @@ main {
     display: block;
 }
 
-.gameArea {
+.game-area {
     text-align: center;
 }
 
-.gameGridContainer {
+.game-grid-container {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -113,7 +113,7 @@ main {
     padding: 15px;
 }
 
-.cellBlock {
+.cell-block {
     width: 120px;
     height: 120px;
     border: 3px solid hsl(0, 0%, 100%);
@@ -124,7 +124,7 @@ main {
     color: hsl(0, 0%, 100%);
 }
 
-.resultsContainer {
+.results-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -141,8 +141,8 @@ main {
 }
 
 
-#restartGameBtn,
-#nextRoundBtn {
+#restart-game-btn,
+#next-round-btn {
     font-family: 'Times New Roman', Times, serif;
     padding: 15px;
     font-size: 18px;
@@ -152,8 +152,8 @@ main {
     border-radius: 6px;
 }
 
-#restartGameBtn:hover,
-#nextRoundBtn:hover {
+#restart-game-btn:hover,
+#next-round-btn:hover {
     background-color: hsl(190, 53%, 39%);
     cursor: pointer;
 }
