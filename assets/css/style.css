@@ -171,8 +171,9 @@ footer {
     text-align: center;
     border: 1px solid hsl(0, 0%, 100%);
     background-color: hsl(190, 71%, 25%);
-    height: 110.27px;
     margin: 5px;
+    width: auto;
+    height: auto;
 }
 
 footer a {
