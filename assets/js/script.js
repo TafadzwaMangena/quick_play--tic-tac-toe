@@ -180,8 +180,6 @@ function restartGame() {
 const welcomeIntro = document.querySelector(".intropage");
 const rulesAndInitiate = document.querySelector(".rules");
 const gameArea = document.querySelector(".game-area");
-//const optionsBtn = document.querySelector("#options-btn");
-//const initiateGameBtn = document.querySelector("#initiate-game-btn");
 
 document.addEventListener("DOMContentLoaded", () => {
   const pages = [
