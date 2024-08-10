@@ -135,8 +135,6 @@ function nextRound() {
   gameActive = true;
 }
 
-
-
 function restartGame() {
   currentPlayer = "X";
   gameState = ["", "", "", "", "", "", "", "", ""];
@@ -165,11 +163,8 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("page not found");
   }
 
-  console.log(gameArea);
-
   window.showNextPage = function (index) {
      showPageOne();
-     console.log("clicked");
    };
 });
 
