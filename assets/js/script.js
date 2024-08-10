@@ -111,7 +111,11 @@ function checkWinner() {
     playersTurn.textContent = winMessage();
     let player1 = parseInt(player1Score.innerText);
     let player2 = parseInt(player2Score.innerText);
-    currentPlayer === "X" ? player1Score.innerText = ++player1 : player2Score.innerText = ++player2;
+    if (currentPlayer === "X") {
+      player1Score.innerText = ++player1;
+      } else {
+      player2Score.innerText = ++player2;
+      }
     gameActive = false;
   } else if (!gameState.includes("")) {
     playersTurn.textContent = drawMessage();
