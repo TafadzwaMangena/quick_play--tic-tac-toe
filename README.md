@@ -109,6 +109,8 @@ Responsive Mock up on different devices \*\*\* PIC
   5. Optional Rules:
     - Rematch: After the game ends, players can choose to play again, switching who goes first.
 
+It is my game design solution (not a bug) that players can play on as many rounds they wish to without a maximum number of rounds that can be played.
+
 - ### Features to implement:
 
   - In the future I intend to add an option to play against a computer.
