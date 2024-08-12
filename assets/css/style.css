@@ -65,7 +65,7 @@ main {
     padding: 20px;
     border: 1px solid hsl(0, 0%, 100%);
     margin: auto;
-    width: 90%;
+    max-width: 50%;
 }
 
 ol {
