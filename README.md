@@ -87,6 +87,28 @@ Responsive Mock up on different devices \*\*\* PIC
 
   GAME AREA PIC
 
+- ### Game Rules:
+
+  1. Game Set-up: 
+    - Board: Decide who will go first. The first player will be X and the second player will be O.
+    - Players: There are two players, Player 1 is "X" and Player 2 is "O".
+
+  2. How to Play:
+    - Starting the Game: The game is played on a 3x3 grid.
+    - Taking Turns: Players take turns placing their mark (X or O) in an empty cell on the grid. Player 1 (X) goes first, followed by Player 2 (O).
+    - Marking the Grid: Click or tap on an empty cell to place your mark. Once placed, the mark cannot be moved or removed.
+
+  3. Winning the Game: 
+    - Winning Condition: A player wins the round if they are the first to get three of their marks in a row (horizontally, vertically, or diagonally). There is no limit to the number of rounds you can play!
+    - Draw: If all nine cells are filled and neither player has three in a row, the game ends in a draw.
+
+  4. Ending the Game:
+    - Declare Winner: Once a player has three marks in a row, the round ends, and that player is declared the winner of the round. You can decide how many rounds you can play.
+    - Declare Draw: If all cells are filled without a winner, declare the game a draw.
+
+  5. Optional Rules:
+    - Rematch: After the game ends, players can choose to play again, switching who goes first.
+
 - ### Features to implement:
 
   - In the future I intend to add an option to play against a computer.
