@@ -145,6 +145,17 @@ ol {
     padding: 10px;
 }
 
+.player1-color {
+    color: orange;
+    font-weight: 900;
+    background-color: white;
+}
+
+.player2-color {
+    color: blue;
+    font-weight: 900;
+    background-color: white;
+}
 
 #restart-game-btn,
 #next-round-btn {
