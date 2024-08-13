@@ -225,17 +225,3 @@ function showPageThree() {
   rulesAndInitiate.classList.remove("active");
   rulesAndInitiate.classList.add("hidden");
 }
-
-
-const dialog = document.querySelector("dialog");
-const restartconf = document.querySelector("#restart-confirmation-btn");
-
-// "Show the dialog" button opens the dialog 
-restartconf.addEventListener("click", () => {
-  dialog.show();
-});
-
-// "Close" button closes the dialog
-restartGameBtn.addEventListener("click", () => {
-  dialog.close();
-});
