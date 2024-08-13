@@ -51,6 +51,7 @@ function startGame() {
  * If cells blocks are empty or the game not active, nothing happens.
  * Otherwise collect cell block info and check winner.
  */
+
 function cellBlockClicked() {
   const dataCellIndex = this.getAttribute("data-cell-index");
 
@@ -60,6 +61,9 @@ function cellBlockClicked() {
 
   updateCellBlock(this, dataCellIndex);
   checkWinner();
+
+  nextRoundBtn.disabled = true;
+  restartGameBtn.disabled = true;
 }
 
 /**
@@ -132,6 +136,9 @@ function checkWinner() {
   } else {
     changePlayer();
   }
+
+  nextRoundBtn.disabled = false;
+  restartGameBtn.disabled = false;
 }
 
 /**
