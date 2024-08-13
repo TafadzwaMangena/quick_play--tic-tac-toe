@@ -28,10 +28,6 @@ let winMessage = () => `${currentPlayer} has won this round!`;
 const drawMessage = () => `This round ended in a draw`;
 let currentPlayerTurn = () => `${currentPlayer}'s turn to play`;
 
-
- //To initialize the game upon start.
-startGame();
-
 /**
  * Fucntion to target each cellblock; added event listener to target the cellblocks when clicked,
  * Add event listener to the restart game button when it is clicked,
@@ -72,7 +68,7 @@ function cellBlockClicked() {
  */
 function updateCellBlock(cellBlock, index) {
   gameState[index] = currentPlayer;
-  cellBlock.textContent = currentPlayer ===  "X" ? "X" : "O";
+  cellBlock.textContent = currentPlayer === "X" ? "X" : "O";
   addColour(cellBlock);
 }
 
@@ -92,17 +88,17 @@ function changePlayer() {
 }
 
 /**
-   * Function to check winner.
-   * For loop to check win conditions in win conditions array.
-   * If there are empty cell blocks, continue game.
-   * If any win conditions are met, round is won, break.
-   * If round is won, dispaly win message, increase current player score by1, game not active.
-   * Else if, there are no empty spaces, display draw message, game is not active and increase draw score by 1.
-   * Otherwise change player.
-   */
+ * Function to check winner.
+ * For loop to check win conditions in win conditions array.
+ * If there are empty cell blocks, continue game.
+ * If any win conditions are met, round is won, break.
+ * If round is won, dispaly win message, increase current player score by1, game not active.
+ * Else if, there are no empty spaces, display draw message, game is not active and increase draw score by 1.
+ * Otherwise change player.
+ */
 function checkWinner() {
   let roundWon = false;
-  
+
   for (let i = 0; i < winningConditions.length; i++) {
     const condition = winningConditions[i];
     const cellBlockA = gameState[condition[0]];
@@ -124,9 +120,9 @@ function checkWinner() {
     let player2 = parseInt(player2Score.innerText);
     if (currentPlayer === "X") {
       player1Score.innerText = ++player1;
-      } else {
+    } else {
       player2Score.innerText = ++player2;
-      }
+    }
     gameActive = false;
   } else if (!gameState.includes("")) {
     playersTurn.textContent = drawMessage();
@@ -160,32 +156,34 @@ function restartGame() {
   gameState = ["", "", "", "", "", "", "", "", ""];
   playersTurn.textContent = currentPlayerTurn();
   cellBlocks.forEach((cellBlock) => (cellBlock.textContent = ""));
-  player1Score.innerText= 0;
+  player1Score.innerText = 0;
   player2Score.innerText = 0;
   drawScore.innerText = 0;
   gameActive = true;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
- // const pages = [
+  // const pages = [
   //  document.querySelector(".intro-options"),
   //  document.querySelector(".rules"),
   //  document.querySelector(".game-area"),
- // ];
+  // ];
+
+  startGame();
 
   if (!gameArea) {
     console.error("page not found");
   }
 
   window.showNextPage = function (index) {
-     showPageOne();
-   };
+    showPageOne();
+  };
 
-   window.showNextPage = function (index) {
+  window.showNextPage = function (index) {
     showPageTwo();
   };
 
- window.showNextPage = function (index) {
+  window.showNextPage = function (index) {
     showPageThree();
   };
 });
