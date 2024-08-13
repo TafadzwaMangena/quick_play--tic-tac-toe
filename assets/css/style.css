@@ -158,7 +158,8 @@ ol {
 }
 
 #restart-game-btn,
-#next-round-btn {
+#next-round-btn,
+#restart-confirm-btn {
     font-family: 'Times New Roman', Times, serif;
     padding: 15px;
     font-size: 18px;
@@ -169,7 +170,8 @@ ol {
 }
 
 #restart-game-btn:hover,
-#next-round-btn:hover {
+#next-round-btn:hover,
+#restart-confirm-btn:hover {
     background-color: hsl(190, 53%, 39%);
     cursor: pointer;
 }
