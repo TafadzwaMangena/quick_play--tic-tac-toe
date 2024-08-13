@@ -180,6 +180,14 @@ document.addEventListener("DOMContentLoaded", () => {
   window.showNextPage = function (index) {
      showPageOne();
    };
+
+   window.showNextPage = function (index) {
+    showPageTwo();
+  };
+
+ window.showNextPage = function (index) {
+    showPageThree();
+  };
 });
 
 //Functions to display different html pages.
