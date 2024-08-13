@@ -225,3 +225,17 @@ function showPageThree() {
   rulesAndInitiate.classList.remove("active");
   rulesAndInitiate.classList.add("hidden");
 }
+
+const dialog = document.querySelector("dialog");
+const restartConf = document.querySelector("dialog + button");
+const closeDialog = document.querySelector("dialog button");
+
+// "Show the dialog" button opens the dialog modally
+restartConf.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// "Close" button closes the dialog
+closeDialog.addEventListener("click", () => {
+  dialog.close();
+});
