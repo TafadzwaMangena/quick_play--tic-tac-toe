@@ -61,9 +61,6 @@ function cellBlockClicked() {
 
   updateCellBlock(this, dataCellIndex);
   checkWinner();
-
-  nextRoundBtn.disabled = true;
-  restartGameBtn.disabled = true;
 }
 
 /**
@@ -74,6 +71,9 @@ function updateCellBlock(cellBlock, index) {
   gameState[index] = currentPlayer;
   cellBlock.textContent = currentPlayer === "X" ? "X" : "O";
   addColour(cellBlock);
+  console.log("buttons disabling");
+  nextRoundBtn.disabled = true;
+  restartGameBtn.disabled = true;
 }
 
 // Fucnction to add color to current player cell block, Orange for current player "X" otherwise blue.
@@ -122,6 +122,9 @@ function checkWinner() {
     playersTurn.textContent = winMessage();
     let player1 = parseInt(player1Score.innerText);
     let player2 = parseInt(player2Score.innerText);
+    console.log("buttons enabling");
+    nextRoundBtn.disabled = false;
+    restartGameBtn.disabled = false;
     if (currentPlayer === "X") {
       player1Score.innerText = ++player1;
     } else {
@@ -133,12 +136,12 @@ function checkWinner() {
     gameActive = false;
     let oldScore = parseInt(document.getElementById("draw-score").innerText);
     document.getElementById("draw-score").innerText = ++oldScore;
+    console.log("buttons enabling");
+    nextRoundBtn.disabled = false;
+    restartGameBtn.disabled = false;
   } else {
     changePlayer();
   }
-
-  nextRoundBtn.disabled = false;
-  restartGameBtn.disabled = false;
 }
 
 /**
