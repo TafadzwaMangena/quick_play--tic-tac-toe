@@ -8,6 +8,7 @@ const drawScore = document.querySelector("#draw-score");
 const welcomeIntro = document.querySelector(".intropage");
 const rulesAndInitiate = document.querySelector(".rules");
 const gameArea = document.querySelector(".game-area");
+const restartConfBtn = document.querySelector("#restart-confirm-btn");
 
 const winningConditions = [
   [0, 1, 2],
