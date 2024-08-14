@@ -201,21 +201,14 @@ I used Markup Validator, W3C CSS Validator Sevices and JShint to validate every 
 
 - ### HTML
 
-  - W3C Makup Validator - [Results]
+  - W3C Markup Validator - [Results]
 
-  - #### Welcome Page
-  
-
-  - #### Options and Rules Page
-  
-
-  - #### Game Area Page
 
 
 - ### CSS
 
    - W3C CSS Validator - [Results]
-   - Direct input results
+
   
 - ### JAVASCRIPT
 
@@ -225,22 +218,7 @@ I used Markup Validator, W3C CSS Validator Sevices and JShint to validate every 
 ### Lighthouse Report
 
 - Accessibility - I confirmed that the colors and fonts chosen are easy to read and accessible (in all pages) by running it through lighthouse in devtools.
-- See below the results of each page.
-
-  - Welcome Page
-
-
-
-  - Options and Rules Page
-
-
-
-  - Game Area Page
-
-
-
-  - Dialog
-
+- See below the results.
 
 
 ---
