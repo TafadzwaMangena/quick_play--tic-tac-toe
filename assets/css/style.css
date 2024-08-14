@@ -127,6 +127,7 @@ ol {
     font-size: 100px;
     cursor: pointer;
     color: hsl(0, 0%, 100%);
+    background-color: hsl(190, 72%, 25%);
 }
 
 .results-container {
