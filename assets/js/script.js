@@ -38,7 +38,7 @@ function startGame() {
   cellBlocks.forEach((cellBlock) =>
     cellBlock.addEventListener("click", cellBlockClicked)
   );
-  restartGameBtn.addEventListener("click", restartGame);
+  restartConfBtn.addEventListener("click", yesRestart);
   playersTurn.textContent = currentPlayerTurn();
   gameActive = true;
 
@@ -163,6 +163,10 @@ function nextRound() {
  * Reset all scores
  */
 function restartGame() {
+  
+}
+
+function yesRestart() {
   currentPlayer = "X";
   gameState = ["", "", "", "", "", "", "", "", ""];
   playersTurn.textContent = currentPlayerTurn();
