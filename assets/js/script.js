@@ -12,6 +12,7 @@ const restartConfBtn = document.querySelector("#restart-confirm-btn");
 const dialog = document.querySelector("dialog");
 const restartConf = document.querySelector("dialog + button");
 const closeDialog = document.querySelector("dialog button");
+const returnToGame = document.querySelector("#return-game-btn")
 
 const winningConditions = [
   [0, 1, 2],
@@ -176,6 +177,11 @@ function yesRestart() {
 // "Show the dialog" button opens the dialog modally
 restartConf.addEventListener("click", () => {
   dialog.showModal();
+});
+
+// "Close" button closes the dialog
+returnToGame.addEventListener("click", () => {
+  dialog.close();
 });
 
 // "Close" button closes the dialog
