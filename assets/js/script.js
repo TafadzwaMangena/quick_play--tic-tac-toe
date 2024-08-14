@@ -162,9 +162,7 @@ function nextRound() {
  * Change current player to and current player message to "X", clear cell blocks, set game active.
  * Reset all scores
  */
-function restartGame() {
-  
-}
+
 
 function yesRestart() {
   currentPlayer = "X";
