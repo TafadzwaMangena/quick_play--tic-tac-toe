@@ -80,7 +80,7 @@ function updateCellBlock(cellBlock, index) {
 
 // Fucnction to add color to current player cell block, Orange for current player "X" otherwise blue.
 function addColour(cellBlock) {
-  const color = currentPlayer == "X" ? "orange" : "blue";
+  const color = currentPlayer == "X" ? "orange" : "chartreuse";
   cellBlock.style.color = color;
 }
 
