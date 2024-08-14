@@ -83,9 +83,18 @@ Responsive Mock up on different devices \*\*\* PIC
   - The information space is right below the game mode area to inform the user's whose turn it is to play and also who has won the game or if a game ended in a draw.
   - The game grid is the section where users place their marks, X or O.
   - The results container is placed below the game grid to dispaly Player 1 and Player 2's scores as well as the games drawn.
-  - Lastly the page has two buttons to play the next round and also to restart the game clearing all data stored in previous game.
+  - Lastly the page has two buttons to play the next round and also to restart the game which redirects user to a dialog to confirm game restart.
 
   GAME AREA PIC
+
+- ### Dialog:
+
+  - The dialog is displayed Modally to stop the user from interacting with anything other than the dialog itself.
+  - The user has two button options to restart the game or return to the current game.
+  - Once either of the buttons is clicked the game returns to current game or new game.
+  - Lastly the dialog has an aqua background and a backdrop of grey to make it visually attractive and easy to read.
+
+  DIALOG PIC
 
 - ### Game Rules:
 
@@ -125,6 +134,7 @@ It is my game design solution (not a bug) that players can play on as many round
 
   - I chose Midnight Green, Blue Munsell, and White as the main colors for my website as the combination creates a visually appealing and effective color scheme.
   - The combination of Midnight Green, Blue Munsell, and White creates a harmonious and balanced color scheme. The deep green provides a solid foundation, the blue adds trustworthiness and clarity, and the white ensures simplicity and readability.
+  - I chose to use Aqua and Grey as the main colors of the dialog to help user to focus on dialog.
   - The contrast between the dark and light colors is visually appealing and draws the viewer’s attention to key elements without being too stark or jarring.
 
   COLOR SCHEME PIC
@@ -156,6 +166,7 @@ It is my game design solution (not a bug) that players can play on as many round
   6.  [Pexels.com](https://www.pexels.com/) : All images used in the website were downloaded from [pexels.com](https://www.pexels.com/).
   7.  [GIMP](https://www.gimp.org/) : GIMP was used to make images to .webp format.
   8.  [CSS-Flexbox](https://en.wikipedia.org/wiki/CSS_Flexible_Box_Layout) : was used to arrange items simmetrically on the pages.
+  9. [CODEPEN](https://codepen.io/pen/) : was used to manipulate my code to determine it's functionality before adding to my code.
   
 ## Testing
 
@@ -197,8 +208,8 @@ I used Markup Validator, W3C CSS Validator Sevices and JShint to validate every 
   - #### Options and Rules Page
   
 
-  - #### Gane Area Page
-  
+  - #### Game Area Page
+
 
 - ### CSS
 
@@ -227,15 +238,19 @@ I used Markup Validator, W3C CSS Validator Sevices and JShint to validate every 
 
 
 
+  - Dialog
+
+
+
 ---
 
 ## Bugs
 
 - ### Solved Bugs
     
-  1. 
+  1. The cell blocks were highlighting with the player's color when click. Only the player mark, (X) or (O) should have color.
 
-  _Solution_: 
+  _Solution_: I removed the border on cell blocks to fix this bug.
 
   2. 
 
