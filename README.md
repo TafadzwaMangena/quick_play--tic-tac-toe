@@ -135,6 +135,7 @@ It is my game design solution (not a bug) that players can play on as many round
   - I chose Midnight Green, Blue Munsell, and White as the main colors for my website as the combination creates a visually appealing and effective color scheme.
   - The combination of Midnight Green, Blue Munsell, and White creates a harmonious and balanced color scheme. The deep green provides a solid foundation, the blue adds trustworthiness and clarity, and the white ensures simplicity and readability.
   - I chose to use Aqua and Grey as the main colors of the dialog to help user to focus on dialog.
+  - Chartreuse and Orange are the mark ( "X" and "O") colors to give a vivid and bright impression.
   - The contrast between the dark and light colors is visually appealing and draws the viewer’s attention to key elements without being too stark or jarring.
 
   COLOR SCHEME PIC
