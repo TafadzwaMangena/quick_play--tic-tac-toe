@@ -74,7 +74,6 @@ function updateCellBlock(cellBlock, index) {
   gameState[index] = currentPlayer;
   cellBlock.textContent = currentPlayer === "X" ? "X" : "O";
   addColour(cellBlock);
-  console.log("buttons disabling");
   nextRoundBtn.disabled = true;
   restartGameBtn.disabled = true;
 }
@@ -125,7 +124,6 @@ function checkWinner() {
     playersTurn.textContent = winMessage();
     let player1 = parseInt(player1Score.innerText);
     let player2 = parseInt(player2Score.innerText);
-    console.log("buttons enabling");
     nextRoundBtn.disabled = false;
     restartGameBtn.disabled = false;
     if (currentPlayer === "X") {
