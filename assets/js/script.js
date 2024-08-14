@@ -9,6 +9,9 @@ const welcomeIntro = document.querySelector(".intropage");
 const rulesAndInitiate = document.querySelector(".rules");
 const gameArea = document.querySelector(".game-area");
 const restartConfBtn = document.querySelector("#restart-confirm-btn");
+const dialog = document.querySelector("dialog");
+const restartConf = document.querySelector("dialog + button");
+const closeDialog = document.querySelector("dialog button");
 
 const winningConditions = [
   [0, 1, 2],
@@ -52,7 +55,6 @@ function startGame() {
  * If cells blocks are empty or the game not active, nothing happens.
  * Otherwise collect cell block info and check winner.
  */
-
 function cellBlockClicked() {
   const dataCellIndex = this.getAttribute("data-cell-index");
 
@@ -158,12 +160,10 @@ function nextRound() {
 }
 
 /**
- * Function to start next round.
+ * Function to restart Game.
  * Change current player to and current player message to "X", clear cell blocks, set game active.
  * Reset all scores
  */
-
-
 function yesRestart() {
   currentPlayer = "X";
   gameState = ["", "", "", "", "", "", "", "", ""];
@@ -175,13 +175,17 @@ function yesRestart() {
   gameActive = true;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  // const pages = [
-  //  document.querySelector(".intro-options"),
-  //  document.querySelector(".rules"),
-  //  document.querySelector(".game-area"),
-  // ];
+// "Show the dialog" button opens the dialog modally
+restartConf.addEventListener("click", () => {
+  dialog.showModal();
+});
 
+// "Close" button closes the dialog
+closeDialog.addEventListener("click", () => {
+  dialog.close();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   startGame();
 
   if (!gameArea) {
@@ -228,17 +232,3 @@ function showPageThree() {
   rulesAndInitiate.classList.remove("active");
   rulesAndInitiate.classList.add("hidden");
 }
-
-const dialog = document.querySelector("dialog");
-const restartConf = document.querySelector("dialog + button");
-const closeDialog = document.querySelector("dialog button");
-
-// "Show the dialog" button opens the dialog modally
-restartConf.addEventListener("click", () => {
-  dialog.showModal();
-});
-
-// "Close" button closes the dialog
-closeDialog.addEventListener("click", () => {
-  dialog.close();
-});
