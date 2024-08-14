@@ -252,25 +252,25 @@ I used Markup Validator, W3C CSS Validator Sevices and JShint to validate every 
 
   _Solution_: I removed the border on cell blocks to fix this bug.
 
-  2. 
+  2. The Next Round and Restart Game button where still disabaled even after the round is finished. This error/ bug was caused by the fact that I was disabling the buttons after calling the checkWinner function, but the checkWinner function is enabling the buttons, causing the disabled buttons to enable and instantly disable.
 
-  _Solution_: 
+  _Solution_: I added console logs on the buttons to check their interaction and now disabled the buttons from the checkWinner function to the updateCellBlock function.
 
-  3. 
+  3. JShint warning/error "Expected an assignment or function call and instead saw an expression." on score increament. 
 
-  _Solution_: 
+  _Solution_: I replacement the ternary operator with an If statement. Currently on line 130 - 134 on JS.
 
 - ### Unsolved Bugs
 
    1. None.  All discovered bugs were fixed. 
 
-   - In case any bugs are discovered please contact us on any of the social media platforms on the footer.
+   - In case any bugs are discovered please flag on github.
 
 ---
 
 ## Deployment
 
-### GitHub Pages Deplyment
+### GitHub Pages Deployment
 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
   - In the GitHub repository, navigate to the Settings tab,
@@ -290,12 +290,15 @@ The live link can be found [here](https://tafadzwamangena.github.io/quick_play--
 - [MDN Web Docs](https://developer.mozilla.org/en-US/), was used to test and validate the code.
 - I got the assistance in changing the colors of the players on [Stack Overflow](https://stackoverflow.com/).
 - The game grid container was inspired by [Bro Code](https://www.youtube.com/@BroCodez)'s Youtube channel.
+- I learnt and had a better understanding of enabling and disabling buttons on [HereWeCode](https://herewecode.io/blog/enable-and-disable-button-javascript/).
+- I learnt and had a better understanding on Dialogs and Modals on [webdevsimplified.com](https://blog.webdevsimplified.com/).
+
 
 ### Content
 
 - The information on the Welcome Page and Options and Rules Page was generated from [chatgpt](https://chatgpt.com/).
-- The workout routines were taken from [health.com](https://www.health.com/)
-- The article on the footer is from [Medium](https://medium.com/)
+- The workout routines were taken from [health.com](https://www.health.com/).
+- The article on the footer is from [Medium](https://medium.com/).
 
 ### Media
 
