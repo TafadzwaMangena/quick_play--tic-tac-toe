@@ -146,15 +146,13 @@ ol {
 }
 
 .player1-color {
-    color: orange;
+    color: hsl(39, 100%, 50%);
     font-weight: 900;
-    background-color: white;
 }
 
 .player2-color {
-    color: blue;
+    color: hsl(91, 100%, 50%);
     font-weight: 900;
-    background-color: white;
 }
 
 #restart-game-btn,
