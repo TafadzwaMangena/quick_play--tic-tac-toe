@@ -1,4 +1,4 @@
-LOGO PIC
+![Quick Play Tic Tac Toe logo](markdown/images/quick-play-tic-tac-toe-logo.webp)
 
 ---
 
@@ -10,7 +10,7 @@ With sleek design, instant gameplay, and no downloads required, you can jump int
 
 The site can be accessed using this link, [QUICK PLAY TIC TAC TOE](https://tafadzwamangena.github.io/quick_play--tic-tac-toe/index.html)
 
-Responsive Mock up on different devices \*\*\* PIC
+![Responsive mock up view](markdown/images/responsive-mock-up.webp)
 
 ---
 
@@ -53,12 +53,14 @@ Responsive Mock up on different devices \*\*\* PIC
   - The logo bar is displayed in all pages, that is the Welcome page, the rules page and the game area page.
   - The Quick Tic Tac Toe logo and name are linked to the home and welcome page.
 
-  LOGO BAR PIC
+  ![Quick Play Tic Tac Toe logo](markdown/images/quick-play-tic-tac-toe-logo.webp)
 
 - ### The footer:
 
   - The footer section is placed at the bottom of each page with a heading of "The wisdom of tic tac toe" to highlight the user that the game is not just about placing your marks but also applying a certain wisdom to it.
   - The footer has an external link to [Medium.com](https://medium.com/age-of-awareness/the-wisdom-of-tic-tac-toe-18f2355905b3) to an article about tic tac toe. Important life lessons in nine moves.
+
+  ![Footer](markdown/images/footer.webp)
 
 - ### Welcome Page:
 
@@ -66,7 +68,7 @@ Responsive Mock up on different devices \*\*\* PIC
   - Also this page informs the players they have equal chance of winning the game yet one player's advantage is another's disadvantage.
   - Lastly the welcome page has an "Options to Play" button which directs them to the game rules page.
 
-  WELCOME PAGE PIC
+  ![Welcome Page](markdown/images/welcome-page.webp)
 
 - ### Rules Page:
 
@@ -74,7 +76,7 @@ Responsive Mock up on different devices \*\*\* PIC
   - Additionally, there is information also on the conditions of winning the game, how the game ends and also optional rules the players can decide on.
   - Lastly the page has a "Initialize Game" button which directs them to the game area.
 
-  RULES PAGE PIC
+  ![Rules Page](markdown/images/rules-page.webp)
 
 - ### Game Area Page:
 
@@ -85,7 +87,7 @@ Responsive Mock up on different devices \*\*\* PIC
   - The results container is placed below the game grid to dispaly Player 1 and Player 2's scores as well as the games drawn.
   - Lastly the page has two buttons to play the next round and also to restart the game which redirects user to a dialog to confirm game restart.
 
-  GAME AREA PIC
+  ![Game Area Page](markdown/images/game-area-page.webp)
 
 - ### Dialog:
 
@@ -94,7 +96,7 @@ Responsive Mock up on different devices \*\*\* PIC
   - Once either of the buttons is clicked the game returns to current game or new game.
   - Lastly the dialog has an aqua background and a backdrop of grey to make it visually attractive and easy to read.
 
-  DIALOG PIC
+  ![Dialog](markdown/images/dialog.webp)
 
 - ### Game Rules:
 
@@ -138,7 +140,7 @@ It is my game design solution (not a bug) that players can play on as many round
   - Chartreuse and Orange are the mark ( "X" and "O") colors to give a vivid and bright impression.
   - The contrast between the dark and light colors is visually appealing and draws the viewer’s attention to key elements without being too stark or jarring.
 
-  COLOR SCHEME PIC
+  ![Web page Color Scheme](markdown/images/color-scheme.webp)
 
 - ### Font:
 
@@ -146,7 +148,7 @@ It is my game design solution (not a bug) that players can play on as many round
   - Times New Roman is used as the font on the buttons to differentiate them and make the content readible.
   - Verdana is the font used on the game grid due to it's bold weight and visibility.
 
-  ALL FONT USED PICS
+  ![Main Font](markdown/images/font-valera-round.webp)
 
 ---
 
@@ -176,13 +178,13 @@ It is my game design solution (not a bug) that players can play on as many round
    - I tested this website in Chrome, Microsoft Edge, Opera and Firefox to make sure avery page works and is responsive.
 
    - #### Chrome
-  
+  [Chrome responsiveness](markdown/videos/responsive-chrome.webm)
+
    - #### Microsoft Edge
-  
-   - #### Opera
-  
+  [MS Edge responsiveness](markdown/videos/responsive-ms-edge.webm)
+
    - #### Firefox
-  
+  [Firefox responsiveness](markdown/videos/responsive-firefox.webm)
 
 - ### Manual Testing
 
@@ -203,16 +205,19 @@ I used Markup Validator, W3C CSS Validator Sevices and JShint to validate every 
 
   - W3C Markup Validator - [Results]
 
-
+![HTML Validator results](markdown/images/w3c-markup-validator.webp)
 
 - ### CSS
 
-   - W3C CSS Validator - [Results]
+  - W3C CSS Validator - [Results]
 
+![CSS Validator results](markdown/images/w3c-css-validator.webp)
   
 - ### JAVASCRIPT
 
-   - JShint report - [Results]
+  - JShint report - [Results]
+
+![JShint results](markdown/images/jshint-results.webp)
    
 
 ### Lighthouse Report
@@ -220,6 +225,7 @@ I used Markup Validator, W3C CSS Validator Sevices and JShint to validate every 
 - Accessibility - I confirmed that the colors and fonts chosen are easy to read and accessible (in all pages) by running it through lighthouse in devtools.
 - See below the results.
 
+![Lighthouse Report results](markdown/images/lighthouse-report.webp)
 
 ---
 
